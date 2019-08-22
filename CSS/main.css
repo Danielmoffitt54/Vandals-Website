@@ -1,7 +1,5 @@
 body{
     Font-family: Verdana;
-    color: white;
-    background-color: grey;
 }
 /* Nav bar */
 #header {
@@ -9,18 +7,22 @@ body{
     width: 100%;
     left: 0px;
     top: 0px;
+    padding-bottom: 5px;
     font-weight: bold;
     display: grid;
     grid-template-columns: 20% auto auto;
+    color: white;
+    background-color: gray;
 }
 /* Home placement box */
 #home_place_box {
     left: 0px;
-    padding-top: 40px;
-    padding-left: 20px;
+    padding-top: 30px;
+    padding-left: 40px;
 }
 /* Home link */
 #home_link {
+    position: fixed;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -33,7 +35,7 @@ body{
 }
 /* Register placement box */
 #register_place_box {
-    padding: 50px 40px 0px 30px;
+    padding: 40px 40px 0px 30px;
 }
 /* Register link */
 #register_link {
@@ -58,7 +60,7 @@ body{
 }
 /* Sub nav link placement box */
 #sub_place_box {
-    padding-top: 27px;
+    padding-top: 17px;
     display: flex;
 }
 /* sub nav link */
