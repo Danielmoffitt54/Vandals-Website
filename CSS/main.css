@@ -1,111 +1,136 @@
-body{
-    Font-family: Verdana;
+body {
+    margin: 0;
+    background-color: lightgrey;
 }
-/* Nav bar */
-#header {
+
+/* Header */
+header {
     position: fixed;
     width: 100%;
-    left: 0px;
-    top: 0px;
-    padding-bottom: 5px;
-    font-weight: bold;
+    text-transform: uppercase;
+    background-color: grey;
     display: grid;
-    grid-template-columns: 20% auto auto;
-    color: white;
-    background-color: gray;
+    grid-template-columns: auto 140px;
 }
-/* Home placement box */
-#home_place_box {
-    left: 0px;
-    padding-top: 30px;
-    padding-left: 40px;
+
+/* Left side of header */
+#header_left {
+    display: flex;
 }
+
 /* Home link */
 #home_link {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    padding: 5px 10px 5px 20px;
+    bottom: 0;
 }
 
-.home_link_text {
-    letter-spacing: 2px;
-    font-size: 36px;
-    text-align: center;
-}
-/* Register placement box */
-#register_place_box {
-    padding: 40px 40px 0px 30px;
-}
-/* Register link */
-#register_link {
-    padding: 20px;
-    letter-spacing: 1px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: white;
-}
-/* Register link animation */
-#register_link:hover {
-    animation-name: hover_animation_register;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
+/* Search bar */
+#search_bar{
+    display: flex;
+    align-items: center;
 }
 
-@keyframes hover_animation_register {
-    100% {
-      background-color: white;
-      color: black;
-    }
+#search_input {
+    font-size: 14pt;
+    padding: 5px;
+    width: 500px;
+    border-radius: 25px;
 }
-/* Sub nav link placement box */
-#sub_place_box {
-    padding-top: 17px;
+
+#search_btn {
+    width: 30px;
+    height: 30px;
+    border-color: transparent;
+    border-radius: 50%;
+    margin-left: -40px;
+}
+
+#search_icon {
+    align-items: center;
+}
+
+/* Right side of header */
+#header_right {
     display: flex;
 }
-/* sub nav link */
-#sub_nav_links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-/* sub nav link class */
-.link {
-    padding: 15px 10px 15px 10px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-align: center;
-}
+
 /* Cart link */
 #cart_link {
-    margin: auto;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
 }
-/* sub nav link animation */
-.link:hover {
-    animation-name: hover_animation_link;
+
+/* Dropdown links hidden */
+#dropdown_links {
+    display: none;
+}
+
+/* Class for header buttons */
+.header_btn {
+    height: 62px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+/* Icon hover animaions */
+i:hover {
+    animation-name: icon_hover;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
 
-@keyframes hover_animation_link {
+@keyframes icon_hover {
     100% {
-      color: black;
+        color: white;
     }
 }
-/* Removes text effects to <a> */
-a {
-    text-decoration: none;
+
+/* Anchor hover animations */
+a  {
     color: currentColor;
+    text-decoration: none;
 }
 
+a:hover {
+    animation-name: a_hover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
 
+@keyframes a_hover {
+    100% {
+        color: white;
+    }
+}
 
+/* Main content of the page */
+main {
+    padding: 100px 50px;
+    text-align: center;
+}
 
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px 150px 0px;
+    background-color: gray;
+}
 
+/* Footer Links */
+#footer_links {
+    width: 230px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
 
-
-
-
+.footer_icon {
+    width: 50px;
+    height: 50px;
+}
 
 /* Class background color */
 .red {
