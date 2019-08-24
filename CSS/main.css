@@ -1,16 +1,17 @@
 body {
     margin: 0;
-    background-color: lightgrey;
+    background-color: whitesmoke;
 }
 
 /* Header */
 header {
     position: fixed;
     width: 100%;
-    text-transform: uppercase;
-    background-color: grey;
+    padding-bottom: 10px;
+    background-image: linear-gradient( black, transparent);
     display: grid;
     grid-template-columns: auto 140px;
+    text-transform: uppercase;
 }
 
 /* Left side of header */
@@ -21,7 +22,6 @@ header {
 /* Home link */
 #home_link {
     padding: 5px 10px 5px 20px;
-    bottom: 0;
 }
 
 /* Search bar */
@@ -33,7 +33,7 @@ header {
 #search_input {
     font-size: 14pt;
     padding: 5px;
-    width: 500px;
+    width: 100%;
     border-radius: 25px;
 }
 
@@ -69,12 +69,13 @@ header {
 /* Class for header buttons */
 .header_btn {
     height: 62px;
+    color: white;
     border-color: transparent;
     background-color: transparent;
 }
 
-/* Icon hover animaions */
-i:hover {
+/* Header icon hover animaions */
+.header_btn:hover, #search_btn:hover {
     animation-name: icon_hover;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
@@ -82,7 +83,7 @@ i:hover {
 
 @keyframes icon_hover {
     100% {
-        color: white;
+        color: gold;
     }
 }
 
@@ -100,22 +101,30 @@ a:hover {
 
 @keyframes a_hover {
     100% {
-        color: white;
+        color: gold;
     }
 }
 
 /* Main content of the page */
 main {
-    padding: 100px 50px;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 15% auto 15%;
     text-align: center;
+}
+
+.main_sidebar {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Footer */
 footer {
+    width: 100%;
+    padding: 50px 0px 150px 0px;
+    background-color: grey;
     display: flex;
     justify-content: center;
-    padding: 50px 0px 150px 0px;
-    background-color: gray;
 }
 
 /* Footer Links */
@@ -127,12 +136,13 @@ footer {
     grid-gap: 10px;
 }
 
+/* Social media icons */
 .footer_icon {
     width: 50px;
     height: 50px;
 }
 
-/* Class background color */
+/*  Testing class background color */
 .red {
     background-color: red;
 }
