@@ -3,148 +3,122 @@ body {
     background-color: whitesmoke;
 }
 
-/* Header */
+    /* Header */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-image: linear-gradient( black, transparent);
-    display: grid;
-    grid-template-columns: auto 150px;
+    height: 80px;
+    background-color: black;
 }
 
-/* Class for header buttons */
-.header_btn {
-    padding: 0;
-    width: 50px;
-    height: 78px;
-    font-size: 15px;
+.headerHomeImg {
+    position: fixed;
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+.headerTopNav, .headerBottomNav {
+    height: 38px;
+    margin-left: 50px;
+    padding-left: 35px;
+}
+
+.headerTopNav{
+    display: grid;
+    grid-template-columns: auto 30%;
+    margin-bottom: 4px;
+    background-image: linear-gradient( white, silver);
+}
+
+.headerBottomNav {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-top: 4px;
+    background-image: linear-gradient( silver, white);
+}
+
+.accountLink {
+    display: flex;
+    align-items: center;
+}
+
+header h6 {
+    margin: 0;
+    font-size: 14px;
     text-transform: uppercase;
-    color: white;
+}
+
+.storeCartBox {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.headerIconLink {
+    display: flex;
     align-items: center;
     justify-content: center;
-    border-color: transparent;
-    background-color: transparent;
 }
 
-/* Left side of header */
-.header_left {
-    display: flex;
-}
 
-/* Home link */
-.home_link {
-    margin: 5px 5px 5px 20px;
-}
-
-.home_img {
-    width: 60px;
-    height: 64px;
-    border-radius: 50%;
-}
-
-/* Log-in Link */
-.log_in {
-    display: flex;
-    padding-left: 0;
-    width: auto;
-}
-
-.log_in_username {
-    margin-left: 2px;
-    width: auto;
-}
-
-/* Right side of header */
-.header_right {
-    display: flex;
-}
-
-/* Cart link */
-.cart_link {
-    display: flex;
-}
-
-/* Dropdown links hidden */
-.dropdown_links {
-    display: none;
-}
-
-/* Search bar */
-.search_bar{
-    display: flex;
-    align-items: center;
-}
-
-#search_input {
-    font-size: 14pt;
-    padding: 5px;
-    width: 100%;
-    border-radius: 25px;
-}
-
-#search_btn {
-    width: 30px;
-    height: 30px;
-    margin-left: -40px;
-    border-color: transparent;
-}
-
-#search_icon {
-    align-items: center;
-}
 
 /* Header icon hover animaions */
-.header_btn:hover, #search_btn:hover {
-    animation-name: icon_hover;
+.headerBtn:hover, #searchBtn:hover {
+    animation-name: HeaderIconHover;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
 
-@keyframes icon_hover {
+@keyframes headerIconHover {
     100% {
         color: gold;
     }
 }
 
-/* Anchor hover animations */ 
-a  {
+/* Header anchor hover animations */ 
+header a  {
     color: currentColor;
     text-decoration: none;
 }
 
-a:hover {
-    animation-name: a_hover;
+header a:hover {
+    animation-name: headerAHover;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
 
-@keyframes a_hover {
+@keyframes headerAHover {
     100% {
         color: gold;
     }
 }
 
-/* Main content of the page */
+    /* Main content of the page */
 main {
     margin: 100px 10% 50px 10%;
     text-align: center;
 }
 
-/* Footer */
+    /* Footer */
 footer {
     width: 100%;
     background-color: hsl( 0, 0%, 75%);
     padding: 50px 0 150px 0;
 }
 
-.footer_icon_placement {
+.footerIconBox {
     display: flex;
     justify-content: center;
 }
 
 /* Footer icons */
-.footer_icons {
+.footerIcons {
     display: grid;
     height: 50px;
     grid-template-columns: 50px 50px 50px 50px;
@@ -152,11 +126,9 @@ footer {
 }
 
 /* Social media icons */
-.social_media_icon {
+.socialMediaIcon {
     width: 50px;
     height: auto;
-
-
 }
 
 /*  Testing class background color */

@@ -1,93 +1,196 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Vette City Lacrosse</title>
-        <meta name="Author" content="Daniel Moffitt">
-        <meta name="Description" content="Homepage for Vette City Lacrosse">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../CSS/main.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Header -->
-        <header>
-        </header>
-        <!-- main -->
-        <main>
-            <!-- Log-in -->
-            <form>
-            </form>
-            <!-- Sign-up -->
-            <form>
-                <!-- Account Set-up -->
-                <div>
-                    <label>account set-up</label>
-                    <input type="text" name="username" placeholder="Username" required>
-                    <input type="text" name="password" placeholder="Password" required>
+<head>
+    <title>Vette City Lacrosse</title>
+    <meta name="Author" content="Daniel Moffitt">
+    <meta name="Description" content="Homepage for Vette City Lacrosse">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../CSS/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('#checkBtn').click(function() {
+            checked = $("input[type=checkbox]:checked").length;
+    ​
+            if(!checked) {
+            alert("You must check at least one checkbox.");
+            return false;
+            }
+    ​
+        });
+    });
+    ​
+    </script>
+    <!-- Header -->
+    <header class="header">
+        <!-- Header left -->
+        <div class="headerLeft">
+            <!-- Home link -->
+            <a href="index.html" class="homeLink">
+                <img class="headerHomeImg" src="https://pbs.twimg.com/profile_images/1082295677391171584/jaKvsdFU_normal.jpg" alt="Vette City Logo">
+            </a>
+        </div>
+        <!-- Header Right -->
+        <div class="headerRight">
+            <!-- Account / Store & Cart -->
+            <div class="headerTopNav">
+                <!-- Account Display -->
+                <a class="accountLink" href="logIn.html">
+                    <i class="material-icons">account_circle</i>
+                    <h6>username here</h6>
+                </a>
+                <!-- Store / Cart -->
+                <div class="storeCartBox">
+                    <!-- Store -->
+                    <a class="headerIconLink" href="#">
+                        <i class="material-icons">store</i>
+                    </a>
+                    <!-- Cart -->
+                    <a class="headerIconLink" href="#">
+                        <i class="material-icons">shopping_cart</i>
+                    </a>
                 </div>
-                <!-- Player Informaion -->
+            </div>
+            <!-- Nav bar -->
+            <div class="headerBottomNav">
+                <!-- Register -->
+                <a class="headerIconLink" href="#">
+                    <i class="material-icons">person_add</i>
+                </a>
+                <!-- Staff -->
+                <a class="headerIconLink" href="#">
+                    <i class="material-icons">group</i>
+                </a>
+                <!-- Contact us -->
+                <a class="headerIconLink" href="#">
+                    <i class="material-icons">mail</i>
+                </a>
+                <!-- Albums -->
+                <a class="headerIconLink" href="#">
+                    <i class="material-icons">photo_library</i>
+                </a>
+                <!-- Search -->
+                <a class="headerIconLink" href="#">
+                    <i class="material-icons">search</i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <!-- Log-in -->
+        <form>
+            <label>Log-in</label>
+            <!-- Log-in inputs -->
+            <div>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" name="password" placeholder="Password" required>
+            </div>
+            <!-- Forgot anchors -->
+            <div>
+                <a href="#">Forgot Username?</a>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <input type="submit" name="login" placeholder="Login">
+        </form>
+        <!-- Sign-up -->
+        <form>
+            <!-- Account Set-up -->
+            <div>
+                <label>account set-up</label>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" name="password" placeholder="Password" required>
+            </div>
+            <!-- Player Informaion -->
+            <div>
+                <label>player information</label>
+                <!-- Name required -->
                 <div>
-                    <label>player information</label>
-                    <!-- Name required -->
+                    <label>name</label>
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                </div>
+                <!-- Gender required -->
+                <div>
+                    <label>gender</label>
+                    <select name="gender" required>
+                        <option value="select">select</option>
+                        <option value="male">male</option>
+                        <option value="female">female</option> 
+                    </select>
+                </div>
+                <!-- * Position (all that apply) one required -->
+                <div>
+                    <label>position</label>
+                    <label for="attack">
+                        <input name="BoxSelect[]" type="checkbox" value="attack">attack
+                    </label>
+                    <label for="middie">
+                        <input name="BoxSelect[]" type="checkbox" value="middie">middie
+                    </label>
+                    <label for="lsm">
+                        <input name="BoxSelect[]" type="checkbox" value="lsm">lsm
+                    </label>
+                    <label for="center">
+                        <input name="BoxSelect[]" type="checkbox" value="center">center
+                    </label>
+                    <label for="fogo">
+                        <input name="BoxSelect[]" type="checkbox" value="fogo">fogo
+                    </label>
+                    <label for="defense">
+                        <input name="BoxSelect[]" type="checkbox" value="defense">defense
+                    </label>
+                    <label for="goalie">
+                        <input name="BoxSelect[]" type="checkbox" value="goalie">goalie
+                    </label>
+                </div>
+                <!-- US lacrosse Number required -->
+                <div>
+                    <label>us lacrosse number</label>
+                    <input type="text" name="usLacrosseNumber" required>
+                    <a href="#">don't have a us lacrosse number?</a>
+                </div>
+                <!-- Mailing address required -->
+                <div>
+                    <label>mailing address</label>
+                    <input type="text" name="address" placeholder="Address" required>
+                    <input type="text" name="city" placeholder="City" required>
+                    <input type="text" name="state" placeholder="State" required>
+                    <input type="text" name="zipCode" placeholder="Zip Code" required>
+                </div>
+                <!-- Email address required -->
+                <div>
+                    <label>email</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <!-- Phone number required -->
+                <div>
+                    <label>phone number</label>
+                    <input type="text" name="phoneNumber" placeholder="(XXX)"  required>
+                    <input type="text" name="phoneNumber" placeholder="XXX"  required>
+                    <input type="text" name="phoneNumber" placeholder="XXXX"  required>
+                </div>
+            </div>
+            <!-- Parent/Guardian Information -->
+            <div>
+                <label>parent/guardian information</label>
+                <!-- Parent/Guardian 1 required -->
+                <div>
+                    <!-- Name -->
                     <div>
                         <label>name</label>
-                        <input type="text" name="firstName" placeholder="First Name" required>
-                        <input type="text" name="lastName" placeholder="Last Name" required>
+                        <input type="text" name="fullName" placeholder="Full Name" required>
                     </div>
-                    <!-- Gender required -->
-                    <div>
-                        <label>gender</label>
-                        <select name="gender" required>
-                            <option value="select">select</option>
-                            <option value="male">male</option>
-                            <option value="female">female</option> 
-                        </select>
-                    </div>
-                    <!-- * Position (all that apply) one required -->
-                    <div>
-                        <label>position</label>
-                        <label for="attack">
-                            <input type="checkbox" name="attack">attack
-                        </label>
-                        <label for="middie">
-                            <input type="checkbox" name="middie">middie
-                        </label>
-                        <label for="lsm">
-                            <input type="checkbox" name="lsm">lsm
-                        </label>
-                        <label for="center">
-                            <input type="checkbox" name="center">center
-                        </label>
-                        <label for="fogo">
-                            <input type="checkbox" name="fogo">fogo
-                        </label>
-                        <label for="defense">
-                            <input type="checkbox" name="defense">defense
-                        </label>
-                        <label for="goalie">
-                            <input type="checkbox" name="goalie">goalie
-                        </label>
-                    </div>
-                    <!-- US lacrosse Number required -->
-                    <div>
-                        <label>us lacrosse number</label>
-                        <input type="text" name="usLacrosseNumber" required>
-                    </div>
-                    <!-- Mailing address required -->
-                    <div>
-                        <label>mailing address</label>
-                        <input type="text" name="mailingAddress" placeholder="Mailing Address" required>
-                        <input type="text" name="city" placeholder="City" required>
-                        <input type="text" name="state" placeholder="State" required>
-                        <input type="text" name="zipCode" placeholder="Zip Code" required>
-                    </div>
-                    <!-- Email address required -->
+                    <!-- Email / needs add email -->
                     <div>
                         <label>email</label>
                         <input type="email" name="email" placeholder="Email" required>
                     </div>
-                    <!-- Phone number required -->
+                    <!-- Phone number / needs add phone -->
                     <div>
                         <label>phone number</label>
                         <input type="text" name="phoneNumber" placeholder="(XXX)"  required>
@@ -95,56 +198,47 @@
                         <input type="text" name="phoneNumber" placeholder="XXXX"  required>
                     </div>
                 </div>
-                <!-- Parent/Guardian Information -->
+                <!-- Parent/Guardian 2 -->
                 <div>
-                    <label>parent/guardian information</label>
-                    <!-- Parent/Guardian 1 required -->
+                    <!-- Name -->
                     <div>
-                        <!-- Name -->
-                        <div>
-                            <label>name</label>
-                            <input type="text" name="fullName" placeholder="Full Name" required>
-                        </div>
-                        <!-- Email -->
-                        <div>
-                            <label>email</label>
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
-                        <!-- Phone number -->
-                        <div>
-                            <label>phone number</label>
-                            <input type="text" name="phoneNumber" placeholder="(XXX)"  required>
-                            <input type="text" name="phoneNumber" placeholder="XXX"  required>
-                            <input type="text" name="phoneNumber" placeholder="XXXX"  required>
-                        </div>
+                        <label>name</label>
+                        <input type="text" name="fullName" placeholder="Full Name">
                     </div>
-                    <!-- Parent/Guardian 2 -->
+                    <!-- Email / needs add email -->
                     <div>
-                        <!-- Name -->
-                        <div>
-                            <label>name</label>
-                            <input type="text" name="fullName" placeholder="Full Name">
-                        </div>
-                        <!-- Email -->
-                        <div>
-                            <label>email</label>
-                            <input type="email" name="email" placeholder="Email">
-                        </div>
-                        <!-- Phone Number -->
-                        <div>
-                            <label>phone number</label>
-                            <input type="text" name="phoneNumber" placeholder="(XXX)">
-                            <input type="text" name="phoneNumber" placeholder="XXX">
-                            <input type="text" name="phoneNumber" placeholder="XXXX">
-                        </div>
+                        <label>email</label>
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <!-- Phone Number / needs add phone -->
+                    <div>
+                        <label>phone number</label>
+                        <input type="text" name="phoneNumber" placeholder="(XXX)">
+                        <input type="text" name="phoneNumber" placeholder="XXX">
+                        <input type="text" name="phoneNumber" placeholder="XXXX">
                     </div>
                 </div>
-                <!-- Submit -->
-                <input type="submit" name="submit" placeholder="submit">
-            </form>
-        </main>
-        <!-- Footer -->
-        <footer>               
-        </footer>
-        </body>
-    </html>
+            </div>
+            <!-- Submit -->
+            <input id="checkBtn" type="button" name="submit" placeholder="Submit" value="Submit">
+        </form>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <!-- footer icons -->
+        <div class="footerIconBox">
+            <!-- Img links to vandals social media -->
+            <div class="footerIcons">
+                <!-- Instagram icon -->
+                <a href="#"><img class="socialMediaIcon" src="https://picsum.photos/200" alt="Instagram Icon"></a>
+                <!-- Twitter icon -->
+                <a href="#"><img class="socialMediaIcon" src="https://picsum.photos/200" alt="Twitter Icon"></a>
+                <!-- Facebook icon -->
+                <a href="#"><img class="socialMediaIcon" src="https://picsum.photos/200" alt="Facebook Icon"></a>
+                <!-- Email icon -->
+                <a href="#"><img class="socialMediaIcon" src="https://picsum.photos/200" alt="Email Icon"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
