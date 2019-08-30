@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: whitesmoke;
+    background-color: hsl(0, 0%, 95%);
 }
 
     /* Header */
@@ -11,7 +11,7 @@ body {
     height: 80px;
     background-color: black;
 }
-
+ /* Header Image */
 .headerHomeImg {
     position: fixed;
     float: left;
@@ -24,12 +24,14 @@ body {
     border-color: black;
 }
 
+/* Account row and Navbar row */
 .headerTopNav, .headerBottomNav {
     height: 38px;
     margin-left: 50px;
     padding-left: 35px;
 }
 
+/* Account row */
 .headerTopNav{
     display: grid;
     grid-template-columns: auto 30%;
@@ -37,6 +39,7 @@ body {
     background-image: linear-gradient( white, silver);
 }
 
+/* Navbar row */
 .headerBottomNav {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -44,6 +47,7 @@ body {
     background-image: linear-gradient( silver, white);
 }
 
+/* Account */
 .accountLink {
     display: flex;
     align-items: center;
@@ -55,45 +59,32 @@ header h6 {
     text-transform: uppercase;
 }
 
+/* Store and Cart */
 .storeCartBox {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
+/* All Header Icons */
 .headerIconLink {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
-
-/* Header icon hover animaions */
-.headerBtn:hover, #searchBtn:hover {
-    animation-name: HeaderIconHover;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
-}
-
-@keyframes headerIconHover {
-    100% {
-        color: gold;
-    }
-}
-
-/* Header anchor hover animations */ 
+/* Header navbar hover animations */
 header a  {
     color: currentColor;
     text-decoration: none;
 }
 
 header a:hover {
-    animation-name: headerAHover;
+    animation-name: headerNavbarHover;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
 }
 
-@keyframes headerAHover {
+@keyframes headerNavbarHover {
     100% {
         color: gold;
     }
@@ -101,7 +92,7 @@ header a:hover {
 
     /* Main content of the page */
 main {
-    margin: 100px 10% 50px 10%;
+    margin: 100px 5% 50px 5%;
     text-align: center;
 }
 
@@ -130,6 +121,20 @@ footer {
     width: 50px;
     height: auto;
 }
+
+@media only screen and (min-width: 768){
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /*  Testing class background color */
 .red {
