@@ -15,8 +15,8 @@ body {
 .headerHomeImg {
     position: fixed;
     float: left;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     margin-left: 5px;
     border-radius: 50%;
     border-style: solid;
@@ -79,9 +79,11 @@ header a  {
 }
 
 header a:hover {
+    text-decoration: none;
     animation-name: headerNavbarHover;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
+    
 }
 
 @keyframes headerNavbarHover {
