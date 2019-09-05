@@ -70,7 +70,7 @@
     <!-- main -->
     <main>
         <!-- Log-in -->
-        <form class="logInForm">
+        <form>
             <h1>log-in</h1>
             <!-- Username -->
             <div>
@@ -82,7 +82,8 @@
                 <a href="#">Forgot Username?</a>
                 <a href="#">Forgot Password?</a>
             </div>
-            <input type="submit" name="login" placeholder="Login">
+            <label><input type="checkbox">remember me</label>
+            <button>log-in</button>
         </form>
         <hr>
         <!-- Sign-up -->
@@ -90,130 +91,20 @@
         <form>
             <!-- Account Set-up -->
             <div class="formContainer">
-                <h3>account set-up</h3>
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="text" name="password" placeholder="Password" required>
-            </div>
-            <!-- Player Informaion -->
-            <div class="formContainer">
-                <h2>player information</h2>
-                <!-- Name required -->
+                <!-- Username -->
                 <div class="formSubContainer">
-                    <label>name</label>
-                    <input type="text" name="firstName" placeholder="First Name" required>
-                    <input type="text" name="lastName" placeholder="Last Name" required>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <p>5-15 characters. Letters and numbers only. </p>
                 </div>
-                <!-- Gender required -->
+                <!-- Password -->
                 <div class="formSubContainer">
-                    <h3>gender</h3>
-                    <select name="gender" required>
-                        <option value="select">select</option>
-                        <option value="male">male</option>
-                        <option value="female">female</option> 
-                    </select>
-                </div>
-                <!-- * Position (all that apply) one required -->
-                <div class="formSubContainer">
-                    <h3>position</h3>
-                    <div class="formCheckbox">
-                        <label for="attack">
-                            <input name="BoxSelect[]" type="checkbox" value="attack">attack
-                        </label>
-                        <label for="middie">
-                            <input name="BoxSelect[]" type="checkbox" value="middie">middie
-                        </label>
-                        <label for="lsm">
-                            <input name="BoxSelect[]" type="checkbox" value="lsm">lsm
-                        </label>
-                        <label for="center">
-                            <input name="BoxSelect[]" type="checkbox" value="center">center
-                        </label>
-                        <label for="fogo">
-                            <input name="BoxSelect[]" type="checkbox" value="fogo">fogo
-                        </label>
-                        <label for="defense">
-                            <input name="BoxSelect[]" type="checkbox" value="defense">defense
-                        </label>
-                        <label for="goalie">
-                            <input name="BoxSelect[]" type="checkbox" value="goalie">goalie
-                        </label>
-                    </div>
-                </div>
-                <!-- US lacrosse Number required -->
-                <div class="formSubContainer">
-                    <h3>us lacrosse number</h3>
-                    <input type="text" name="usLacrosseNumber" required>
-                    <a href="https://uslsso.ebiz.uapps.net/SSO/Register.aspx?vi=7&vt=819e47b519d8191b5a4a9b6d2fbad34d9f3f6766a46f830b053bb87da99819a32b26dd1a2f3f9e320a5c2b508d057bb377d271071a68976bcdcc691d1b20f77fba3f49efcf1acfcdd192582610361de480d2c766b4246ff99a1f626978826751ac28a571d8b10cbe19fe0f48161d691a5f3b3329d4cf8e34b91e6f84452b36194dcf8a3b6e8fe14d8adc6d627b1f32737ade059ad8e57c072ec20bfd4db1a5318a549cf1b224b13fa1cb76467893da254bb29d1c7d5813cde6ec6a7c005d3b998d962c51bb5b2a86bdcc3b00660f548d3244a710aafaaab34b216f40ca7d9a59">don't have a us lacrosse number?</a>
-                </div>
-                <!-- Mailing address required -->
-                <div class="formSubContainer">
-                    <h3>current address</h3>
-                    <input type="text" name="address" placeholder="Address" required>
-                    <input type="text" name="city" placeholder="City" required>
-                    <input type="text" name="state" placeholder="State" required>
-                    <input type="text" name="zipCode" placeholder="Zip Code" required>
-                </div>
-                <!-- Email address required -->
-                <div class="formSubContainer">
-                    <h3>email</h3>
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-                <!-- Phone number required -->
-                <div class="formSubContainer">
-                    <h3>phone number</h3>
-                    <input type="text" name="phoneNumber" placeholder="(XXX)"  required>
-                    <input type="text" name="phoneNumber" placeholder="XXX"  required>
-                    <input type="text" name="phoneNumber" placeholder="XXXX"  required>
-                </div>
-            </div>
-            <!-- Additional player here -->
-            <div>
-                <label>additional player tab here</label>
-            </div>
-            <!-- Parent/Guardian Information -->
-            <div>
-                <h2>parent/guardian information</h2>
-                <!-- Parent/Guardian 1 required -->
-                <div class="formContainer">
-                    <!-- Name -->
-                    <div class="formSubContainer">
-                        <input type="text" name="fullName" placeholder="Full Name" required>
-                    </div>
-                    <!-- Email / needs add email -->
-                    <div class="formSubContainer">
-                        <input type="email" name="email" placeholder="Email" required>
-                    </div>
-                    <!-- Phone number / needs add phone -->
-                    <div class="formSubContainer">
-                        <input type="text" name="phoneNumber" placeholder="(XXX)"  required>
-                        <input type="text" name="phoneNumber" placeholder="XXX"  required>
-                        <input type="text" name="phoneNumber" placeholder="XXXX"  required>
-                    </div>
-                </div>
-                <!-- Parent/Guardian 2 -->
-                <div class="formContainer">
-                    <!-- Name -->
-                    <div class="formSubContainer">
-                        <input type="text" name="fullName" placeholder="Full Name">
-                    </div>
-                    <!-- Email / needs add email -->
-                    <div class="formSubContainer">
-                        <input type="email" name="email" placeholder="Email">
-                    </div>
-                    <!-- Phone Number / needs add phone -->
-                    <div class="formSubContainer">
-                        <input type="text" name="phoneNumber" placeholder="(XXX)">
-                        <input type="text" name="phoneNumber" placeholder="XXX">
-                        <input type="text" name="phoneNumber" placeholder="XXXX">
-                    </div>
-                </div>
-                <!-- Add Contact -->
-                <div>
-                    <label>additional contact tab here</label>
+                    <input type="text" name="password" placeholder="Password" required>
+                    <input type="text" name="password" placeholder="Confirm Password" required>
+                    <p>Minimum of 8 characters.</p>
                 </div>
             </div>
             <!-- Submit -->
-            <input type="submit" name="submit" placeholder="Submit" value="Submit">
+            <button>sign-up</button>
         </form>
     </main>
     <!-- Footer -->
