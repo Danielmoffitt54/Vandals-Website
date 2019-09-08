@@ -71,6 +71,9 @@ header h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.headerDropdown {
     padding-top: 7px;
 }
 
@@ -152,7 +155,7 @@ footer {
 /* Computer browser styling */
 @media only screen and (min-width: 1025px) {
     body {
-        background-color: black;
+        background-color: gray;
     }
 
 }

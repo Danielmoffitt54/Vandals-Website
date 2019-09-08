@@ -1,0 +1,17 @@
+.carouselImg {
+    width: 100%;
+    height: 45vmin;
+}
+
+h5, h6 {
+    text-transform: capitalize;
+}
+
+h3, h4 {
+    margin: 10px 0;
+}
+
+.addInfo {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
