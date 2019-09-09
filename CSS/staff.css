@@ -1,0 +1,9 @@
+.staffImg {
+    width: 50%;
+    height: 50vmin;
+    float: right;
+}
+
+h3, h5 {
+    text-transform: capitalize;
+}
