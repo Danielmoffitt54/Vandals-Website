@@ -1,0 +1,28 @@
+/* sessions offered */
+table {
+    width: 100%;
+}
+
+table, tr, td {
+    border: solid 2px rgb(192, 192, 192);
+}
+
+/* register form */
+button {
+    margin: 25px;
+    padding: 10px 25px;
+    background-color: whitesmoke;
+    border: solid 5px silver;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Additional edits */
+th, td, h1, h2, h3 {
+    text-transform: capitalize;
+}
+
+h2, h3 {
+    margin: 10px 0;
+}
