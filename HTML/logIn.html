@@ -1,3 +1,8 @@
+<!-- 
+    - login screen have selector to pick either parent | player | coach 
+    - checkbox for tutorial of website
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -105,43 +110,45 @@
     </header>
     <!-- main -->
     <main>
-        <!-- Log-in -->
-        <form>
+        <div>
+            <!-- Log-in -->
             <h1>log-in</h1>
-            <!-- Username -->
-            <div>
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="text" name="password" placeholder="Password" required>
-            </div>
-            <!-- Password -->
-            <div>
-                <a href="#">Forgot Username?</a>
-                <a href="#">Forgot Password?</a>
-            </div>
-            <label><input type="checkbox">remember me</label>
-            <button>log-in</button>
-        </form>
-        <hr>
-        <!-- Sign-up -->
-        <h1>sign-up</h1>
-        <form>
-            <!-- Account Set-up -->
-            <div class="formContainer">
+            <form>
                 <!-- Username -->
-                <div class="formSubContainer">
+                <div>
                     <input type="text" name="username" placeholder="Username" required>
-                    <p>5-15 characters. Letters and numbers only. </p>
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <!-- Password -->
-                <div class="formSubContainer">
-                    <input type="text" name="password" placeholder="Password" required>
-                    <input type="text" name="password" placeholder="Confirm Password" required>
-                    <p>Minimum of 8 characters.</p>
+                <div>
+                    <a href="#">Forgot Username?</a>
+                    <a href="#">Forgot Password?</a>
                 </div>
-            </div>
-            <!-- Submit -->
-            <button>sign-up</button>
-        </form>
+                <label><input type="checkbox">remember me</label>
+                <button>log-in</button>
+            </form> 
+            <hr>
+            <!-- Sign-up -->
+            <h1>sign-up</h1>
+            <form>
+                <!-- Account Set-up -->
+                <div class="formContainer">
+                    <!-- Username -->
+                    <div class="formSubContainer">
+                        <input type="text" name="username" placeholder="Username" required>
+                        <p>5-15 characters. Letters and numbers only. </p>
+                    </div>
+                    <!-- Password -->
+                    <div class="formSubContainer">
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="password" name="password" placeholder="Confirm Password" required>
+                        <p>Minimum of 8 characters.</p>
+                    </div>
+                </div>
+                <!-- Submit -->
+                <button>sign-up</button>
+            </form>
+        </div>
     </main>
     <!-- Footer -->
     <footer>

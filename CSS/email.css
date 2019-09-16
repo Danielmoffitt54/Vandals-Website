@@ -1,0 +1,19 @@
+form [type="text"], form [type="email"] {
+    text-align: center;
+    width: 85%;
+    margin: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkgray;
+    border-radius: 25px;
+}
+
+textarea {
+    width: 85%;
+    height: 50vh;
+    margin: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkgray;
+    border-radius: 10px;
+}
